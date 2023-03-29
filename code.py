@@ -1,4 +1,6 @@
 import re
+import os
+from count import count_words_and_sentences
 
 def count_words_and_sentences(filename):
     # відкриваємо файл для зчитування
