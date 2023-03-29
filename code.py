@@ -31,3 +31,14 @@ def output():
     print(f"Кількість слів: {result['words']}")
     print(f"Кількість речень: {result['sentences']}")
 output()
+# unit-тести
+def test_count_words_and_sentences():
+    # створюємо тимчасовий файл для тестування
+    with open("test_file.txt", "w") as file:
+        file.write("Це тестовий файл. В ньому має бути 5 слів та 2 речення.")
+
+    # тестуємо функцію
+    assert count_words_and_sentences("test_file.txt") == (5, 2)
+
+    # видаляємо тимчасовий файл
+    os.remove("test_file.txt")
